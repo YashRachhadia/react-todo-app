@@ -54,18 +54,20 @@ const Todo = ({ text, todo, todos, setTodos }) => {
   return (
     <div className="todo">
       {isUpdate ? (
-        <li className="update-todo-container">
-          <input
-            type="text"
-            className="update-todo-input"
-            value={updatedText}
-            onChange={updateInputHandler}
-            autoFocus
-          />
+        <>
+          <li className="update-todo-container">
+            <input
+              type="text"
+              className="update-todo-input"
+              value={updatedText}
+              onChange={updateInputHandler}
+              autoFocus
+            />
+          </li>
           <button onClick={updateDoneHandler} className="update-done-btn">
             <i className="fas fa-check-double"></i>
           </button>
-        </li>
+        </>
       ) : (
         <>
           <li className={`todo-item ${todo.completed ? "completed" : ""}`}>

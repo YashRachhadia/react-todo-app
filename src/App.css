@@ -22,6 +22,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 form input,
@@ -56,12 +57,13 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  width: 40%;
   list-style: none;
 }
 
 .todo {
   margin: 0.5rem;
+  width: 100%;
   background: white;
   font-size: 1.5rem;
   color: black;
@@ -78,6 +80,8 @@ form button:hover {
 
 .todo li {
   flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .trash-btn,
@@ -100,7 +104,12 @@ form button:hover {
   background: #0bd4a2;
 }
 
+.update-done-btn {
+  background: #3021b4;
+}
+
 .todo-item {
+  width: 70%;
   padding: 0rem 0.5rem;
 }
 
@@ -109,7 +118,6 @@ form button:hover {
 }
 
 .update-todo-container .update-todo-input {
-  width: 100%;
   border: none;
   font-size: 1.5rem;
   padding: 0rem 0.5rem;
@@ -171,4 +179,81 @@ select {
   background: #5d26c1;
   cursor: pointer;
   pointer-events: none;
+}
+
+@media screen and (max-width: 900px) {
+  .todo-list {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .todo-input {
+    width: 300px;
+  }
+
+  header {
+    font-size: 1rem;
+  }
+
+  .todo {
+    font-size: 1rem;
+  }
+
+  .todo-list {
+    width: 50%;
+  }
+
+  form input {
+    font-size: 1.5rem;
+  }
+  form input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .trash-btn,
+  .complete-btn,
+  .update-btn,
+  .update-done-btn {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .update-todo-container .update-todo-input {
+    font-size: 1rem;
+  }
+
+  .todo-button {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .todo-input {
+    width: 200px;
+  }
+
+  .todo {
+    font-size: 1rem;
+  }
+
+  .trash-btn,
+  .complete-btn,
+  .update-btn,
+  .update-done-btn {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .update-todo-container .update-todo-input {
+    font-size: 1rem;
+  }
+
+  .filter-todo {
+    padding: 0.8rem;
+  }
+
+  .select::after {
+    padding: 0.8rem;
+  }
 }
