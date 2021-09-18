@@ -70,7 +70,10 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         </>
       ) : (
         <>
-          <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+          <li
+            title={text}
+            className={`todo-item ${todo.completed ? "completed" : ""}`}
+          >
             {text}
           </li>
           <button onClick={completeHandler} className="complete-btn">
