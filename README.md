@@ -1,6 +1,6 @@
 # Todo App
 
-![todoapp image](public/appimage.jpg)
+![todoappImage](public/appimage.JPG)
 
 - A todo app built using React. Uses functional components, hooks and localStorage.
 - A todo can be marked as completed, can be updated if needed and can be deleted if no longer needed.
